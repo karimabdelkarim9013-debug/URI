@@ -1,0 +1,4602 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <link rel="icon" type="image/jpeg" href="uri2.jpg.jpg" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="URI – Undergraduate Research Initiative | Suez Canal Branch">
+
+<meta name="theme-color" content="#006b35">
+
+<title>URI | Undergraduate Research Initiative</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   URI V6
+   CLEAR • STRONG • PROFESSIONAL
+========================================================= */
+
+:root{
+
+    --green:#006b35;
+    --green-dark:#004d27;
+    --green-light:#00a651;
+    --green-bright:#16c76a;
+
+    --green-soft:#eaf7ef;
+    --green-pale:#f4fbf6;
+
+    --black:#102019;
+    --text:#29382f;
+    --muted:#6f7c74;
+
+    --white:#ffffff;
+    --background:#f7faf8;
+
+    --border:#e2e9e4;
+
+    --shadow:0 12px 35px rgba(0,60,30,.07);
+    --shadow-hover:0 22px 55px rgba(0,60,30,.12);
+
+    --radius:18px;
+    --container:1180px;
+
+    --transition:.28s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:var(--background);
+    color:var(--text);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+body.dark{
+
+    --background:#07120c;
+    --white:#0e1b14;
+
+    --black:#f2faf5;
+    --text:#d7e5dc;
+    --muted:#91a49a;
+
+    --border:#1d3025;
+
+    --green-soft:#10281b;
+    --green-pale:#0c2115;
+
+    --shadow:0 12px 35px rgba(0,0,0,.20);
+    --shadow-hover:0 22px 55px rgba(0,0,0,.30);
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    width:min(var(--container),calc(100% - 40px));
+    margin:auto;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section{
+    padding:105px 0;
+}
+
+.section-header{
+    max-width:700px;
+    margin-bottom:50px;
+}
+
+.section-header.center{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+
+    color:var(--green-light);
+
+    font-size:11px;
+    font-weight:800;
+
+    text-transform:uppercase;
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.kicker::before{
+    content:"";
+    width:25px;
+    height:2px;
+    background:var(--green-light);
+}
+
+.section-title{
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:clamp(34px,4vw,52px);
+
+    line-height:1.08;
+    letter-spacing:-1.7px;
+
+    margin-bottom:17px;
+}
+
+.section-title span{
+    color:var(--green-light);
+}
+
+.section-description{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   SVG ICONS
+========================================================= */
+
+.icon{
+    width:20px;
+    height:20px;
+
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn{
+
+    min-height:52px;
+
+    padding:0 21px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    border-radius:11px;
+
+    font-size:13px;
+    font-weight:800;
+
+    border:1px solid transparent;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.btn-primary{
+
+    background:var(--green);
+    color:#fff;
+
+    box-shadow:
+        0 10px 25px rgba(0,107,53,.18);
+}
+
+.btn-primary:hover{
+
+    background:var(--green-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(0,107,53,.25);
+}
+
+.btn-outline{
+
+    background:var(--white);
+    color:var(--black);
+
+    border-color:var(--border);
+}
+
+.btn-outline:hover{
+
+    border-color:var(--green-light);
+    color:var(--green);
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.scroll-progress{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0;
+    height:3px;
+
+    background:var(--green-bright);
+
+    z-index:9999;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    padding:17px 0;
+
+    transition:var(--transition);
+}
+
+.header.scrolled{
+
+    padding:9px 0;
+}
+
+.header-inner{
+
+    height:66px;
+
+    display:flex;
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:0 12px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(0,0,0,.06);
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 8px 30px rgba(0,50,25,.06);
+}
+
+.dark .header-inner{
+
+    background:rgba(14,27,20,.90);
+
+    border-color:rgba(255,255,255,.07);
+}
+
+
+/* BRAND */
+
+.brand{
+
+    display:flex;
+    align-items:center;
+
+    gap:11px;
+
+    min-width:215px;
+}
+
+.brand img{
+
+    width:42px;
+    height:42px;
+
+    object-fit:contain;
+
+    border-radius:9px;
+}
+
+.brand-name{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:14px;
+    font-weight:800;
+
+    color:var(--black);
+}
+
+.brand-sub{
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    letter-spacing:.3px;
+}
+
+
+/* NAV */
+
+.nav{
+
+    display:flex;
+    align-items:center;
+
+    gap:2px;
+}
+
+.nav a{
+
+    padding:9px 10px;
+
+    border-radius:8px;
+
+    font-size:11px;
+    font-weight:700;
+
+    color:var(--muted);
+
+    transition:var(--transition);
+}
+
+.nav a:hover,
+.nav a.active{
+
+    color:var(--green);
+
+    background:var(--green-soft);
+}
+
+
+/* HEADER ACTIONS */
+
+.header-actions{
+
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+}
+
+.theme-btn,
+.menu-btn{
+
+    width:39px;
+    height:39px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:9px;
+
+    border:1px solid var(--border);
+
+    background:var(--white);
+
+    color:var(--black);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.theme-btn:hover,
+.menu-btn:hover{
+
+    color:var(--green);
+
+    border-color:var(--green-light);
+}
+
+.menu-btn{
+    display:none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:820px;
+
+    display:flex;
+    align-items:center;
+
+    padding:160px 0 90px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 78% 25%,
+            rgba(0,166,81,.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(0,107,53,.06),
+            transparent 25%
+        ),
+
+        var(--background);
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.1fr
+        .9fr;
+
+    align-items:center;
+
+    gap:70px;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content{
+    max-width:700px;
+}
+
+.open-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:8px 13px;
+
+    border-radius:50px;
+
+    background:var(--green-soft);
+
+    color:var(--green);
+
+    border:1px solid #cce6d6;
+
+    font-size:10px;
+    font-weight:800;
+
+    text-transform:uppercase;
+    letter-spacing:.8px;
+
+    margin-bottom:25px;
+}
+
+.badge-dot{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--green-bright);
+
+    box-shadow:
+        0 0 0 5px rgba(22,199,106,.10);
+}
+
+.hero-title{
+
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:clamp(50px,6vw,76px);
+
+    line-height:1.01;
+
+    letter-spacing:-3.2px;
+
+    max-width:760px;
+
+    margin-bottom:25px;
+}
+
+.hero-title span{
+    color:var(--green);
+}
+
+.hero-text{
+
+    max-width:620px;
+
+    color:var(--muted);
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:11px;
+
+    margin-bottom:35px;
+}
+
+
+/* HERO INFO */
+
+.hero-info{
+
+    display:flex;
+    align-items:center;
+
+    gap:25px;
+}
+
+.hero-info-item{
+
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    color:var(--muted);
+
+    font-size:11px;
+    font-weight:700;
+}
+
+.hero-info-icon{
+
+    width:32px;
+    height:32px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:8px;
+
+    background:var(--green-soft);
+
+    color:var(--green);
+}
+
+.hero-info-icon svg{
+    width:15px;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual{
+
+    min-height:500px;
+
+    position:relative;
+
+    display:grid;
+    place-items:center;
+}
+
+.hero-circle{
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(0,166,81,.12);
+}
+
+.hero-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:65px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(0,166,81,.10);
+}
+
+.hero-circle::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:130px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(0,166,81,.09);
+}
+
+
+/* MAIN VISUAL CARD */
+
+.hero-main-card{
+
+    position:relative;
+    z-index:3;
+
+    width:290px;
+    min-height:370px;
+
+    padding:30px;
+
+    border-radius:26px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 30px 70px rgba(0,60,30,.13);
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    overflow:hidden;
+}
+
+.hero-main-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    top:-90px;
+    right:-80px;
+
+    border-radius:50%;
+
+    background:var(--green-soft);
+}
+
+.hero-logo{
+
+    position:relative;
+    z-index:2;
+
+    width:125px;
+    height:125px;
+
+    object-fit:contain;
+
+    margin:25px auto 10px;
+}
+
+.hero-card-title{
+
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+}
+
+.hero-card-title strong{
+
+    display:block;
+
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:21px;
+}
+
+.hero-card-title span{
+
+    display:block;
+
+    color:var(--muted);
+
+    font-size:10px;
+}
+
+.hero-card-bottom{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-top:16px;
+
+    border-top:1px solid var(--border);
+
+    font-size:9px;
+
+    color:var(--muted);
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.hero-card-bottom b{
+    color:var(--green);
+}
+
+
+/* FLOATING CARDS */
+
+.float-card{
+
+    position:absolute;
+
+    z-index:4;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 15px;
+
+    border-radius:13px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+.float-card.research{
+
+    left:0;
+    top:65px;
+}
+
+.float-card.network{
+
+    right:-5px;
+    bottom:65px;
+}
+
+.float-icon{
+
+    width:37px;
+    height:37px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:9px;
+
+    background:var(--green-soft);
+
+    color:var(--green);
+}
+
+.float-icon svg{
+    width:17px;
+}
+
+.float-card strong{
+
+    display:block;
+
+    color:var(--black);
+
+    font-size:11px;
+}
+
+.float-card span{
+
+    display:block;
+
+    color:var(--muted);
+
+    font-size:9px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    background:var(--white);
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr
+        1.2fr;
+
+    gap:90px;
+
+    align-items:center;
+}
+
+
+/* ABOUT VISUAL */
+
+.about-visual{
+
+    position:relative;
+
+    min-height:420px;
+}
+
+.about-panel{
+
+    position:absolute;
+
+    inset:0 45px 30px 0;
+
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #004d27,
+            #008f49
+        );
+
+    overflow:hidden;
+}
+
+.about-panel::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+    height:340px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    right:-140px;
+    top:-120px;
+}
+
+.about-panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+    height:200px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    left:-100px;
+    bottom:-100px;
+}
+
+.about-panel img{
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    object-fit:contain;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    filter:drop-shadow(0 15px 30px rgba(0,0,0,.15));
+}
+
+.about-label{
+
+    position:absolute;
+
+    right:0;
+    bottom:0;
+
+    padding:19px 22px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+}
+
+.about-label strong{
+
+    display:block;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:22px;
+
+    color:var(--black);
+}
+
+.about-label span{
+
+    color:var(--muted);
+
+    font-size:9px;
+}
+
+
+/* ABOUT CONTENT */
+
+.about-content p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+}
+
+.about-points{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin-top:28px;
+}
+
+.about-point{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    transition:var(--transition);
+}
+
+.about-point:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#c5dfcf;
+
+    box-shadow:var(--shadow);
+}
+
+.about-check{
+
+    width:27px;
+    height:27px;
+
+    display:grid;
+    place-items:center;
+
+    flex-shrink:0;
+
+    border-radius:7px;
+
+    background:var(--green-soft);
+
+    color:var(--green);
+}
+
+.about-check svg{
+    width:13px;
+}
+
+.about-point span{
+
+    color:var(--black);
+
+    font-size:11px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+
+    background:var(--green-dark);
+
+    color:white;
+
+    padding:34px 0;
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+
+    padding:7px 30px;
+
+    border-right:1px solid rgba(255,255,255,.12);
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat strong{
+
+    display:block;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:30px;
+
+    line-height:1.2;
+
+    margin-bottom:4px;
+}
+
+.stat span{
+
+    color:rgba(255,255,255,.62);
+
+    font-size:9px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.2px;
+}
+
+
+/* =========================================================
+   WHY URI
+========================================================= */
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+}
+
+.why-card{
+
+    padding:28px;
+
+    min-height:265px;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    background:var(--white);
+
+    position:relative;
+
+    transition:var(--transition);
+}
+
+.why-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:var(--shadow-hover);
+
+    border-color:#c6ded0;
+}
+
+.why-number{
+
+    position:absolute;
+
+    top:20px;
+    right:22px;
+
+    color:#b1beb7;
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+.card-icon{
+
+    width:47px;
+    height:47px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:12px;
+
+    background:var(--green-soft);
+
+    color:var(--green);
+
+    margin-bottom:32px;
+}
+
+.card-icon svg{
+    width:21px;
+}
+
+.why-card h3{
+
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:16px;
+
+    margin-bottom:9px;
+}
+
+.why-card p{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   OBJECTIVES
+========================================================= */
+
+.objectives{
+
+    background:var(--white);
+}
+
+.objectives-grid{
+
+    display:grid;
+
+    grid-template-columns:.75fr 1.25fr;
+
+    gap:100px;
+}
+
+.objective-list{
+
+    border-top:1px solid var(--border);
+}
+
+.objective{
+
+    display:grid;
+
+    grid-template-columns:55px 1fr;
+
+    gap:15px;
+
+    padding:24px 0;
+
+    border-bottom:1px solid var(--border);
+
+    transition:var(--transition);
+}
+
+.objective:hover{
+    padding-left:8px;
+}
+
+.objective-number{
+
+    color:#a5b2aa;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:11px;
+}
+
+.objective h3{
+
+    color:var(--black);
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:17px;
+
+    margin-bottom:4px;
+}
+
+.objective p{
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.programs{
+    background:var(--background);
+}
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.program{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:var(--transition);
+}
+
+.program:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+}
+
+
+/* PROGRAM HEADER */
+
+.program-header{
+
+    min-height:135px;
+
+    padding:26px;
+
+    background:var(--green-dark);
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.program-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    border-radius:50%;
+
+    right:-80px;
+    top:-100px;
+}
+
+.program-heading{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.program-code{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:27px;
+}
+
+.program-status{
+
+    padding:5px 8px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:50px;
+
+    font-size:8px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+}
+
+
+/* PROGRAM BODY */
+
+.program-body{
+
+    padding:27px;
+}
+
+.program-body h3{
+
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:17px;
+
+    margin-bottom:9px;
+}
+
+.program-body p{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.8;
+
+    min-height:65px;
+
+    margin-bottom:23px;
+}
+
+.program-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:var(--green);
+
+    font-size:11px;
+
+    font-weight:800;
+}
+
+.program-link svg{
+
+    width:14px;
+
+    transition:var(--transition);
+}
+
+.program-link:hover svg{
+    transform:translateX(4px);
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey{
+
+    background:var(--white);
+}
+
+.journey-track{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    position:relative;
+
+    margin-top:70px;
+}
+
+.journey-track::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:25px;
+
+    left:10%;
+    right:10%;
+
+    height:1px;
+
+    background:var(--border);
+}
+
+.journey-step{
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.journey-number{
+
+    width:50px;
+    height:50px;
+
+    display:grid;
+    place-items:center;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    color:#9ca9a1;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:11px;
+
+    transition:var(--transition);
+}
+
+.journey-step:hover .journey-number{
+
+    color:white;
+
+    background:var(--green);
+
+    border-color:var(--green);
+
+    box-shadow:0 0 0 7px var(--green-soft);
+}
+
+.journey-step h3{
+
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:13px;
+
+    margin-bottom:5px;
+}
+
+.journey-step p{
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    max-width:140px;
+
+    margin:auto;
+}
+
+
+/* =========================================================
+   PATH
+========================================================= */
+
+.path-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+}
+
+.path{
+
+    padding:40px;
+
+    border-radius:22px;
+
+    border:1px solid var(--border);
+
+    background:var(--white);
+
+    transition:var(--transition);
+}
+
+.path:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+}
+
+.path.primary{
+
+    background:var(--green);
+
+    border-color:var(--green);
+
+    color:white;
+}
+
+.path-label{
+
+    color:var(--green-light);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.4px;
+
+    margin-bottom:14px;
+}
+
+.path.primary .path-label{
+    color:#9ae4b9;
+}
+
+.path h3{
+
+    color:var(--black);
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+}
+
+.path.primary h3{
+    color:white;
+}
+
+.path p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    margin-bottom:25px;
+
+    max-width:500px;
+}
+
+.path.primary p{
+    color:rgba(255,255,255,.70);
+}
+
+.path.primary .btn-primary{
+
+    background:white;
+
+    color:var(--green-dark);
+}
+
+
+/* =========================================================
+   COMMITTEES
+========================================================= */
+
+.committees{
+    background:var(--white);
+}
+
+.committee-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:14px;
+}
+
+.committee{
+
+    padding:26px;
+
+    border:1px solid var(--border);
+
+    border-radius:17px;
+
+    transition:var(--transition);
+}
+
+.committee:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+    border-color:#c6dfd0;
+}
+
+.committee-number{
+
+    color:#abb8b0;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:.8px;
+
+    margin-bottom:28px;
+}
+
+.committee h3{
+
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:15px;
+
+    margin-bottom:8px;
+}
+
+.committee p{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-layout{
+
+    display:grid;
+
+    grid-template-columns:.7fr 1.3fr;
+
+    gap:90px;
+}
+
+.faq-list{
+
+    border-top:1px solid var(--border);
+}
+
+.faq{
+
+    border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+
+    width:100%;
+
+    border:0;
+
+    background:none;
+
+    color:var(--black);
+
+    padding:20px 0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    font-weight:800;
+}
+
+.faq-plus{
+
+    width:29px;
+    height:29px;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    color:var(--green);
+
+    transition:var(--transition);
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    line-height:1.85;
+
+    padding:0 45px 20px 0;
+}
+
+.faq.open .faq-plus{
+
+    color:white;
+
+    background:var(--green);
+
+    transform:rotate(45deg);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    padding:100px 0;
+}
+
+.cta-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:70px;
+
+    border-radius:28px;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(255,255,255,.12),
+            transparent 25%
+        ),
+
+        var(--green-dark);
+
+    color:white;
+}
+
+.cta-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    right:-220px;
+    top:-230px;
+}
+
+.cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:750px;
+}
+
+.cta .kicker{
+    color:#9be5ba;
+}
+
+.cta .kicker::before{
+    background:#9be5ba;
+}
+
+.cta h2{
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:clamp(35px,4vw,54px);
+
+    line-height:1.08;
+
+    letter-spacing:-1.5px;
+
+    margin-bottom:17px;
+}
+
+.cta p{
+
+    color:rgba(255,255,255,.68);
+
+    font-size:13px;
+
+    max-width:600px;
+
+    margin-bottom:28px;
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.cta .btn-primary{
+
+    background:white;
+
+    color:var(--green-dark);
+}
+
+.cta .btn-outline{
+
+    background:transparent;
+
+    color:white;
+
+    border-color:rgba(255,255,255,.22);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+
+    background:var(--white);
+
+    border-top:1px solid var(--border);
+
+    padding:32px 0;
+}
+
+.footer-inner{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.footer-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+}
+
+.footer-brand img{
+
+    width:39px;
+    height:39px;
+
+    object-fit:contain;
+}
+
+.footer-brand strong{
+
+    display:block;
+
+    font-family:"Montserrat",sans-serif;
+
+    color:var(--black);
+
+    font-size:18
+}
+
+.footer-brand span{
+
+    display:block;
+
+    color:var(--muted);
+
+    font-size:12x;
+}
+
+.footer-copy{
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-size:12x;
+}
+
+
+/* =========================================================
+   FLOATING APPLY
+========================================================= */
+
+.floating-apply{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    z-index:900;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 16px;
+
+    border-radius:11px;
+
+    background:var(--green);
+
+    color:white;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    box-shadow:var(--shadow-hover);
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    pointer-events:none;
+
+    transition:var(--transition);
+}
+
+.floating-apply.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-top{
+
+    position:fixed;
+
+    right:20px;
+    bottom:75px;
+
+    width:38px;
+    height:38px;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    background:var(--white);
+
+    color:var(--green);
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transform:translateY(10px);
+
+    pointer-events:none;
+
+    transition:var(--transition);
+
+    z-index:899;
+}
+
+.back-top.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(22px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1050px){
+
+    .nav a{
+        padding:8px 7px;
+        font-size:10px;
+    }
+
+    .hero-grid{
+        gap:40px;
+    }
+
+    .why-grid,
+    .committee-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .objectives-grid,
+    .faq-layout{
+        gap:50px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+@media(max-width:850px){
+
+    .nav{
+
+        position:absolute;
+
+        top:76px;
+
+        left:20px;
+        right:20px;
+
+        padding:10px;
+
+        background:var(--white);
+
+        border:1px solid var(--border);
+
+        border-radius:15px;
+
+        box-shadow:var(--shadow-hover);
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .nav.open{
+        display:flex;
+    }
+
+    .nav a{
+        padding:12px;
+    }
+
+    .menu-btn{
+        display:grid;
+    }
+
+    .header-apply{
+        display:none;
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:140px;
+    }
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero-visual{
+
+        min-height:480px;
+
+        margin-top:10px;
+    }
+
+    .about-grid,
+    .objectives-grid,
+    .faq-layout{
+
+        grid-template-columns:1fr;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr;
+    }
+
+    .journey-track{
+
+        grid-template-columns:1fr;
+
+        gap:28px;
+
+        margin-top:40px;
+    }
+
+    .journey-track::before{
+
+        left:25px;
+        right:auto;
+
+        top:25px;
+        bottom:25px;
+
+        width:1px;
+        height:auto;
+    }
+
+    .journey-step{
+
+        display:grid;
+
+        grid-template-columns:50px 1fr;
+
+        text-align:left;
+
+        gap:18px;
+
+        align-items:center;
+    }
+
+    .journey-number{
+        margin:0;
+    }
+
+    .journey-step p{
+        max-width:none;
+        margin:0;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .path-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .container{
+        width:calc(100% - 28px);
+    }
+
+    .section{
+        padding:75px 0;
+    }
+
+    .header{
+        padding:9px 0;
+    }
+
+    .header-inner{
+        height:59px;
+    }
+
+    .brand{
+        min-width:auto;
+    }
+
+    .brand-sub{
+        display:none;
+    }
+
+    .hero{
+        padding:125px 0 70px;
+    }
+
+    .hero-title{
+
+        font-size:43px;
+
+        letter-spacing:-2px;
+    }
+
+    .hero-text{
+        font-size:13px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .hero-info{
+
+        flex-wrap:wrap;
+
+        gap:10px;
+    }
+
+    .hero-visual{
+        min-height:400px;
+    }
+
+    .hero-circle{
+
+        width:350px;
+        height:350px;
+    }
+
+    .hero-main-card{
+
+        width:245px;
+
+        min-height:320px;
+
+        padding:24px;
+    }
+
+    .hero-logo{
+
+        width:100px;
+        height:100px;
+    }
+
+    .float-card{
+        padding:9px;
+    }
+
+    .float-card.research{
+        left:0;
+        top:50px;
+    }
+
+    .float-card.network{
+        right:0;
+        bottom:45px;
+    }
+
+    .float-icon{
+
+        width:31px;
+        height:31px;
+    }
+
+    .float-card strong{
+        font-size:9px;
+    }
+
+    .float-card span{
+        font-size:7px;
+    }
+
+    .about-visual{
+        min-height:350px;
+    }
+
+    .about-panel{
+        right:25px;
+    }
+
+    .about-panel img{
+        width:120px;
+        height:120px;
+    }
+
+    .about-points{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid,
+    .committee-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+        gap:15px 0;
+    }
+
+    .stat{
+        padding:6px 15px;
+    }
+
+    .stat strong{
+        font-size:23px;
+    }
+
+    .stat span{
+        font-size:7px;
+    }
+
+    .path{
+        padding:28px;
+    }
+
+    .cta-box{
+        padding:45px 25px;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .cta-buttons .btn{
+        width:100%;
+    }
+
+    .footer-inner{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .footer-copy{
+        text-align:left;
+    }
+
+    .floating-apply{
+
+        left:12px;
+        right:12px;
+        bottom:12px;
+
+        justify-content:center;
+    }
+
+    .back-top{
+        right:12px;
+        bottom:68px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+
+        animation:none!important;
+
+        transition:none!important;
+    }
+
+    .reveal{
+
+        opacity:1;
+
+        transform:none;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =======================================================
+     SVG ICON DEFINITIONS
+======================================================= -->
+
+<svg width="0" height="0" style="position:absolute">
+
+<symbol id="flask" viewBox="0 0 24 24">
+    <path d="M9 3h6"/>
+    <path d="M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/>
+    <path d="M8 15h8"/>
+</symbol>
+
+<symbol id="book" viewBox="0 0 24 24">
+    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/>
+    <path d="M4 5.5V21"/>
+    <path d="M8 7h8"/>
+    <path d="M8 11h8"/>
+</symbol>
+
+<symbol id="leader" viewBox="0 0 24 24">
+    <circle cx="12" cy="7" r="3"/>
+    <path d="M5 21a7 7 0 0 1 14 0"/>
+    <path d="m18 8 2 2 3-4"/>
+</symbol>
+
+<symbol id="network" viewBox="0 0 24 24">
+    <circle cx="12" cy="5" r="2.5"/>
+    <circle cx="5" cy="18" r="2.5"/>
+    <circle cx="19" cy="18" r="2.5"/>
+    <path d="M12 7.5v4"/>
+    <path d="m10 12-3.2 3.5"/>
+    <path d="m14 12 3.2 3.5"/>
+</symbol>
+
+<symbol id="check" viewBox="0 0 24 24">
+    <path d="m5 12 4 4L19 6"/>
+</symbol>
+
+<symbol id="arrow" viewBox="0 0 24 24">
+    <path d="M5 12h14"/>
+    <path d="m13 6 6 6-6 6"/>
+</symbol>
+
+<symbol id="moon" viewBox="0 0 24 24">
+    <path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/>
+</symbol>
+
+<symbol id="sun" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M12 2v2"/>
+    <path d="M12 20v2"/>
+    <path d="m4.93 4.93 1.42 1.42"/>
+    <path d="m17.65 17.65 1.42 1.42"/>
+    <path d="M2 12h2"/>
+    <path d="M20 12h2"/>
+    <path d="m4.93 19.07 1.42-1.42"/>
+    <path d="m17.65 6.35 1.42-1.42"/>
+</symbol>
+
+<symbol id="menu" viewBox="0 0 24 24">
+    <path d="M4 7h16"/>
+    <path d="M4 12h16"/>
+    <path d="M4 17h16"/>
+</symbol>
+
+<symbol id="close" viewBox="0 0 24 24">
+    <path d="M6 6l12 12"/>
+    <path d="M18 6 6 18"/>
+</symbol>
+
+<symbol id="plus" viewBox="0 0 24 24">
+    <path d="M12 5v14"/>
+    <path d="M5 12h14"/>
+</symbol>
+
+<symbol id="up" viewBox="0 0 24 24">
+    <path d="m6 15 6-6 6 6"/>
+</symbol>
+
+</svg>
+
+<!-- =======================================================
+     SCROLL PROGRESS
+======================================================= -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header class="header" id="header">
+
+<div class="container">
+
+<div class="header-inner">
+
+<a href="#home" class="brand">
+
+<img
+src="uri1.jpg.jpg"
+alt="URI Logo"
+
+>
+
+<div>
+
+<div class="brand-name">
+URI
+</div>
+
+<div class="brand-sub">
+Undergraduate Research Initiative
+</div>
+
+</div>
+
+</a>
+
+<nav class="nav" id="nav">
+
+<a href="#about">About</a>
+
+<a href="#why">Why URI</a>
+
+<a href="#objectives">Objectives</a>
+
+<a href="#programs">Programs</a>
+
+<a href="#journey">Journey</a>
+
+<a href="#committees">Committees</a>
+
+<a href="#faq">FAQ</a>
+
+</nav>
+
+<div class="header-actions">
+
+<button
+class="theme-btn"
+id="themeBtn"
+aria-label="Toggle theme"
+
+>
+
+<svg class="icon" id="themeIcon">
+<use href="#moon"></use>
+</svg>
+
+</button>
+
+<button
+class="menu-btn"
+id="menuBtn"
+aria-label="Open menu"
+
+>
+
+<svg class="icon">
+<use href="#menu"></use>
+</svg>
+
+</button>
+
+<a
+href="#cta"
+class="btn btn-primary header-apply"
+
+>
+
+Apply Now </a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div class="hero-content reveal">
+
+<div class="open-badge">
+
+<span class="badge-dot"></span>
+
+SRT Applications Open
+
+</div>
+
+<h1 class="hero-title">
+
+Start Your
+
+<span>Research Journey.</span>
+
+</h1>
+
+<p class="hero-text">
+
+URI – Suez Canal Branch empowers undergraduate students
+to participate in real research projects and develop
+academic, research, and leadership skills.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSdKFZl3s3jhHV0gbGgxZnaOboYwhnnFQmKrAjANxiLjXAJGBQ/viewform?usp=dialog"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary"
+
+>
+
+Join SRT
+
+<svg class="icon">
+<use href="#arrow"></use>
+</svg>
+
+</a>
+
+<a
+href="#about"
+class="btn btn-outline"
+
+>
+
+Explore URI
+
+</a>
+
+</div>
+
+<div class="hero-info">
+
+<div class="hero-info-item">
+
+<div class="hero-info-icon">
+
+<svg class="icon">
+<use href="#flask"></use>
+</svg>
+
+</div>
+
+Scientific Research
+
+</div>
+
+<div class="hero-info-item">
+
+<div class="hero-info-icon">
+
+<svg class="icon">
+<use href="#leader"></use>
+</svg>
+
+</div>
+
+Student Leadership
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HERO VISUAL -->
+
+<div class="hero-visual reveal">
+
+<div class="hero-circle"></div>
+
+<div class="float-card research">
+
+<div class="float-icon">
+
+<svg class="icon">
+<use href="#flask"></use>
+</svg>
+
+</div>
+
+<div>
+
+<strong>Research</strong>
+
+<span>Learn by doing</span>
+
+</div>
+
+</div>
+
+<div class="hero-main-card">
+
+<div></div>
+
+<img
+src="uri2.jpg.jpg"
+alt="URI Logo"
+class="hero-logo"
+
+>
+
+<div class="hero-card-title">
+
+<strong>URI</strong>
+
+<span>
+Suez Canal Branch
+</span>
+
+</div>
+
+<div class="hero-card-bottom">
+
+<span>
+Student Initiative
+</span>
+
+<b>
+2025
+</b>
+
+</div>
+
+</div>
+
+<div class="float-card network">
+
+<div class="float-icon">
+
+<svg class="icon">
+<use href="#network"></use>
+</svg>
+
+</div>
+
+<div>
+
+<strong>Connect</strong>
+
+<span>Build your network</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     ABOUT
+======================================================= -->
+
+<section class="section about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-visual reveal">
+
+<div class="about-panel">
+
+<img
+src="uri1.jpg.jpg"
+alt="URI Logo"
+
+>
+
+</div>
+
+<div class="about-label">
+
+<strong>2025</strong>
+
+<span>
+Building future researchers
+</span>
+
+</div>
+
+</div>
+
+<div class="about-content reveal">
+
+<div class="section-header">
+
+<div class="kicker">
+About URI
+</div>
+
+<h2 class="section-title">
+
+Where students become <span>researchers.</span>
+
+</h2>
+
+</div>
+
+<p>
+
+The Undergraduate Research Initiative (URI) –
+Suez Canal Branch is a student-driven initiative
+that aims to empower undergraduate students to
+engage in scientific research, academic activities,
+and community projects.
+
+</p>
+
+<p>
+
+URI provides students with practical experiences,
+research training, leadership opportunities, and
+professional networking to help them build a
+strong academic and research foundation.
+
+</p>
+
+<div class="about-points">
+
+<div class="about-point">
+
+<div class="about-check">
+
+<svg class="icon">
+<use href="#check"></use>
+</svg>
+
+</div>
+
+<span>
+Practical research experience
+</span>
+
+</div>
+
+<div class="about-point">
+
+<div class="about-check">
+
+<svg class="icon">
+<use href="#check"></use>
+</svg>
+
+</div>
+
+<span>
+Academic development
+</span>
+
+</div>
+
+<div class="about-point">
+
+<div class="about-check">
+
+<svg class="icon">
+<use href="#check"></use>
+</svg>
+
+</div>
+
+<span>
+Leadership opportunities
+</span>
+
+</div>
+
+<div class="about-point">
+
+<div class="about-check">
+
+<svg class="icon">
+<use href="#check"></use>
+</svg>
+
+</div>
+
+<span>
+Professional networking
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     STATS
+======================================================= -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+
+<strong>01</strong>
+
+<span>
+Research Initiative
+</span>
+
+</div>
+
+<div class="stat">
+
+<strong>03</strong>
+
+<span>
+Learning Programs
+</span>
+
+</div>
+
+<div class="stat">
+
+<strong>04</strong>
+
+<span>
+Student Committees
+</span>
+
+</div>
+
+<div class="stat">
+
+<strong>∞</strong>
+
+<span>
+Opportunities to Grow
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     WHY URI
+======================================================= -->
+
+<section class="section" id="why">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="kicker">
+Why URI
+</div>
+
+<h2 class="section-title">
+
+More than an <span>initiative.</span>
+
+</h2>
+
+<p class="section-description">
+
+URI creates an environment where students can
+learn, experiment, collaborate, and take their
+first serious steps into the world of research.
+
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<article class="why-card reveal">
+
+<span class="why-number">
+01
+</span>
+
+<div class="card-icon">
+
+<svg class="icon">
+<use href="#flask"></use>
+</svg>
+
+</div>
+
+<h3>
+Research Skills
+</h3>
+
+<p>
+Enhance students’ research and leadership
+abilities through practical learning.
+</p>
+
+</article>
+
+<article class="why-card reveal">
+
+<span class="why-number">
+02
+</span>
+
+<div class="card-icon">
+
+<svg class="icon">
+<use href="#book"></use>
+</svg>
+
+</div>
+
+<h3>
+Academic Growth
+</h3>
+
+<p>
+Promote academic initiatives and meaningful
+community projects.
+</p>
+
+</article>
+
+<article class="why-card reveal">
+
+<span class="why-number">
+03
+</span>
+
+<div class="card-icon">
+
+<svg class="icon">
+<use href="#leader"></use>
+</svg>
+
+</div>
+
+<h3>
+Leadership
+</h3>
+
+<p>
+Develop confident students capable of leading
+teams and research projects.
+</p>
+
+</article>
+
+<article class="why-card reveal">
+
+<span class="why-number">
+04
+</span>
+
+<div class="card-icon">
+
+<svg class="icon">
+<use href="#network"></use>
+</svg>
+
+</div>
+
+<h3>
+Networking
+</h3>
+
+<p>
+Build a network connecting students,
+researchers, and academic initiatives.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     OBJECTIVES
+======================================================= -->
+
+<section class="section objectives" id="objectives">
+
+<div class="container">
+
+<div class="objectives-grid">
+
+<div class="section-header reveal">
+
+<div class="kicker">
+Our Objectives
+</div>
+
+<h2 class="section-title">
+
+Built around <span>growth.</span>
+
+</h2>
+
+<p class="section-description">
+
+Every URI activity is designed to help students
+move from curiosity to practical research experience.
+
+</p>
+
+</div>
+
+<div class="objective-list">
+
+<div class="objective reveal">
+
+<div class="objective-number">
+01
+</div>
+
+<div>
+
+<h3>
+Research Skills
+</h3>
+
+<p>
+Enhance students’ research and leadership abilities.
+</p>
+
+</div>
+
+</div>
+
+<div class="objective reveal">
+
+<div class="objective-number">
+02
+</div>
+
+<div>
+
+<h3>
+Academic Initiatives
+</h3>
+
+<p>
+Promote academic initiatives and community projects.
+</p>
+
+</div>
+
+</div>
+
+<div class="objective reveal">
+
+<div class="objective-number">
+03
+</div>
+
+<div>
+
+<h3>
+Hands-on Training
+</h3>
+
+<p>
+Offer practical training through SRT, RL, and RS.
+</p>
+
+</div>
+
+</div>
+
+<div class="objective reveal">
+
+<div class="objective-number">
+04
+</div>
+
+<div>
+
+<h3>
+Networking
+</h3>
+
+<p>
+Build connections between students, researchers,
+and academic initiatives.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     PROGRAMS
+======================================================= -->
+
+<section class="section programs" id="programs">
+
+<div class="container">
+
+<div class="section-header center reveal">
+
+<div class="kicker">
+Programs
+</div>
+
+<h2 class="section-title">
+
+Your path into <span>research.</span>
+
+</h2>
+
+<p class="section-description">
+
+Explore URI's learning tracks and choose the
+experience that matches your academic journey.
+
+</p>
+
+</div>
+
+<div class="program-grid">
+
+<!-- SRT -->
+
+<article class="program reveal">
+
+<div class="program-header">
+
+<div class="program-heading">
+
+<div class="program-code">
+SRT
+</div>
+
+<div class="program-status">
+Applications Open
+</div>
+
+</div>
+
+</div>
+
+<div class="program-body">
+
+<h3>
+Scientific Research Training
+</h3>
+
+<p>
+Practical training in scientific research
+for undergraduate students.
+</p>
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSdKFZl3s3jhHV0gbGgxZnaOboYwhnnFQmKrAjANxiLjXAJGBQ/viewform?usp=dialog"
+target="_blank"
+rel="noopener noreferrer"
+class="program-link"
+
+>
+
+Apply for SRT
+
+<svg class="icon">
+<use href="#arrow"></use>
+</svg>
+
+</a>
+
+</div>
+
+</article>
+
+<!-- RL -->
+
+<article class="program reveal">
+
+<div class="program-header">
+
+<div class="program-heading">
+
+<div class="program-code">
+RL
+</div>
+
+<div class="program-status">
+Coming Soon
+</div>
+
+</div>
+
+</div>
+
+<div class="program-body">
+
+<h3>
+Research Leader
+</h3>
+
+<p>
+Preparing students to become research leaders
+and manage projects.
+</p>
+
+<span
+class="program-link"
+style="color:#8d9992;"
+
+>
+
+Coming Soon
+
+</span>
+
+</div>
+
+</article>
+
+<!-- RS -->
+
+<article class="program reveal">
+
+<div class="program-header">
+
+<div class="program-heading">
+
+<div class="program-code">
+RS
+</div>
+
+<div class="program-status">
+Coming Soon
+</div>
+
+</div>
+
+</div>
+
+<div class="program-body">
+
+<h3>
+Research School
+</h3>
+
+<p>
+Learn research methodologies in depth to conduct
+academic research effectively.
+</p>
+
+<span
+class="program-link"
+style="color:#8d9992;"
+
+>
+
+Coming Soon
+
+</span>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     JOURNEY
+======================================================= -->
+
+<section class="section journey" id="journey">
+
+<div class="container">
+
+<div class="section-header center reveal">
+
+<div class="kicker">
+Student Journey
+</div>
+
+<h2 class="section-title">
+
+From curiosity to <span>research.</span>
+
+</h2>
+
+<p class="section-description">
+
+A simple path designed to help students grow
+step by step.
+
+</p>
+
+</div>
+
+<div class="journey-track">
+
+<div class="journey-step reveal">
+
+<div class="journey-number">
+01
+</div>
+
+<div>
+
+<h3>
+Discover
+</h3>
+
+<p>
+Explore URI and discover your research interests.
+</p>
+
+</div>
+
+</div>
+
+<div class="journey-step reveal">
+
+<div class="journey-number">
+02
+</div>
+
+<div>
+
+<h3>
+Join
+</h3>
+
+<p>
+Choose the program or committee that fits you.
+</p>
+
+</div>
+
+</div>
+
+<div class="journey-step reveal">
+
+<div class="journey-number">
+03
+</div>
+
+<div>
+
+<h3>
+Learn
+</h3>
+
+<p>
+Build research and academic skills.
+</p>
+
+</div>
+
+</div>
+
+<div class="journey-step reveal">
+
+<div class="journey-number">
+04
+</div>
+
+<div>
+
+<h3>
+Practice
+</h3>
+
+<p>
+Apply what you learn through real activities.
+</p>
+
+</div>
+
+</div>
+
+<div class="journey-step reveal">
+
+<div class="journey-number">
+05
+</div>
+
+<div>
+
+<h3>
+Lead
+</h3>
+
+<p>
+Grow into a confident researcher and leader.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     CHOOSE YOUR PATH
+======================================================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div class="kicker">
+Choose Your Path
+</div>
+
+<h2 class="section-title">
+
+Find your place <span>inside URI.</span>
+
+</h2>
+
+</div>
+
+<div class="path-grid">
+
+<div class="path primary reveal">
+
+<div class="path-label">
+Research Track
+</div>
+
+<h3>
+Join as an Intern
+</h3>
+
+<p>
+Start your scientific research journey through
+structured training and practical experience.
+</p>
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSdKFZl3s3jhHV0gbGgxZnaOboYwhnnFQmKrAjANxiLjXAJGBQ/viewform?usp=dialog"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary"
+
+>
+
+Apply as Intern
+
+<svg class="icon">
+<use href="#arrow"></use>
+</svg>
+
+</a>
+
+</div>
+
+<div class="path reveal">
+
+<div class="path-label">
+Community Track
+</div>
+
+<h3>
+Join as a Member
+</h3>
+
+<p>
+Become part of URI's committees and contribute
+to media, PR, logistics, or training.
+</p>
+
+<a
+href="#committees"
+class="btn btn-outline"
+
+>
+
+Explore Committees
+
+<svg class="icon">
+<use href="#arrow"></use>
+</svg>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     COMMITTEES
+======================================================= -->
+
+<section class="section committees" id="committees">
+
+<div class="container">
+
+<div class="section-header center reveal">
+
+<div class="kicker">
+Committees
+</div>
+
+<h2 class="section-title">
+
+Build the initiative <span>with us.</span>
+
+</h2>
+
+<p class="section-description">
+
+Every committee contributes a different skill set
+to create a stronger student research community.
+
+</p>
+
+</div>
+
+<div class="committee-grid">
+
+<article class="committee reveal">
+
+<div class="committee-number">
+01 / PR
+</div>
+
+<h3>
+Public Relations
+</h3>
+
+<p>
+Manage campaigns and student communication.
+</p>
+
+</article>
+
+<article class="committee reveal">
+
+<div class="committee-number">
+02 / MEDIA
+</div>
+
+<h3>
+Media
+</h3>
+
+<p>
+Design, photography, and content production.
+</p>
+
+</article>
+
+<article class="committee reveal">
+
+<div class="committee-number">
+03 / LOGISTICS
+</div>
+
+<h3>
+Logistics
+</h3>
+
+<p>
+Organize workshops and events efficiently.
+</p>
+
+</article>
+
+<article class="committee reveal">
+
+<div class="committee-number">
+04 / T&D
+</div>
+
+<h3>
+Training & Development
+</h3>
+
+<p>
+Provide academic and research support for students.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     FAQ
+======================================================= -->
+
+<section class="section" id="faq">
+
+<div class="container">
+
+<div class="faq-layout">
+
+<div class="section-header reveal">
+
+<div class="kicker">
+FAQ
+</div>
+
+<h2 class="section-title">
+
+Questions? <span>We've got you.</span>
+
+</h2>
+
+<p class="section-description">
+
+Everything you need to know before starting
+your URI journey.
+
+</p>
+
+</div>
+
+<div class="faq-list">
+
+<div class="faq reveal">
+
+<button class="faq-question">
+
+<span>
+What is URI?
+</span>
+
+<span class="faq-plus">
+
+<svg class="icon">
+<use href="#plus"></use>
+</svg>
+
+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+URI is a student-driven initiative focused on
+undergraduate scientific research, academic
+activities, leadership, and community projects.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq reveal">
+
+<button class="faq-question">
+
+<span>
+Who can join URI?
+</span>
+
+<span class="faq-plus">
+
+<svg class="icon">
+<use href="#plus"></use>
+</svg>
+
+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Undergraduate students interested in research,
+academic development, leadership, or student
+activities can explore the available URI paths.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq reveal">
+
+<button class="faq-question">
+
+<span>
+What is SRT?
+</span>
+
+<span class="faq-plus">
+
+<svg class="icon">
+<use href="#plus"></use>
+</svg>
+
+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+SRT stands for Scientific Research Training.
+It provides practical training that introduces
+undergraduate students to scientific research.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq reveal">
+
+<button class="faq-question">
+
+<span>
+Are RL and RS available now?
+</span>
+
+<span class="faq-plus">
+
+<svg class="icon">
+<use href="#plus"></use>
+</svg>
+
+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Research Leader (RL) and Research School (RS)
+are currently marked as coming soon.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+     CTA
+======================================================= -->
+
+<section class="cta" id="cta">
+
+<div class="container">
+
+<div class="cta-box reveal">
+
+<div class="cta-content">
+
+<div class="kicker">
+Your Next Step
+</div>
+
+<h2>
+Ready to build your research journey?
+</h2>
+
+<p>
+
+Join URI – Suez Canal Branch and turn your
+curiosity into practical research experience,
+skills, and meaningful connections.
+
+</p>
+
+<div class="cta-buttons">
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSdKFZl3s3jhHV0gbGgxZnaOboYwhnnFQmKrAjANxiLjXAJGBQ/viewform?usp=dialog"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary"
+
+>
+
+Join as an Intern
+
+<svg class="icon">
+<use href="#arrow"></use>
+</svg>
+
+</a>
+
+<a
+href="#committees"
+class="btn btn-outline"
+
+>
+
+Join as a Member
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<img
+src="uri1.jpg.jpg"
+alt="URI Logo"
+
+>
+
+<div>
+
+<strong>
+URI – Undergraduate Research Initiative
+</strong>
+
+<span>
+Suez Canal Branch
+</span>
+
+</div>
+
+</div>
+
+<div class="footer-copy">
+
+© 2025 URI – Undergraduate Research Initiative |
+Suez Canal Branch
+
+<br>
+
+Created by KArim Abd Elkarim
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- =======================================================
+     FLOATING APPLY
+======================================================= -->
+
+<a
+href="https://docs.google.com/forms/d/e/1FAIpQLSdKFZl3s3jhHV0gbGgxZnaOboYwhnnFQmKrAjANxiLjXAJGBQ/viewform?usp=dialog"
+target="_blank"
+rel="noopener noreferrer"
+class="floating-apply"
+id="floatingApply"
+
+>
+
+Apply for SRT
+
+<svg class="icon">
+<use href="#arrow"></use>
+</svg>
+
+</a>
+
+<!-- BACK TOP -->
+
+<button
+class="back-top"
+id="backTop"
+aria-label="Back to top"
+
+>
+
+<svg class="icon">
+<use href="#up"></use>
+</svg>
+
+</button>
+
+<script>
+
+/* =========================================================
+   URI V6 JAVASCRIPT
+========================================================= */
+
+
+/* ELEMENTS */
+
+const body =
+    document.body;
+
+const header =
+    document.getElementById("header");
+
+const progress =
+    document.getElementById("scrollProgress");
+
+const themeBtn =
+    document.getElementById("themeBtn");
+
+const themeIcon =
+    document.getElementById("themeIcon");
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const nav =
+    document.getElementById("nav");
+
+const backTop =
+    document.getElementById("backTop");
+
+const floatingApply =
+    document.getElementById("floatingApply");
+
+
+/* =========================================================
+   THEME
+========================================================= */
+
+const savedTheme =
+    localStorage.getItem("uri-v6-theme");
+
+
+if(savedTheme === "dark"){
+
+    body.classList.add("dark");
+
+    themeIcon.innerHTML =
+        '<use href="#sun"></use>';
+}
+
+
+themeBtn.addEventListener("click",()=>{
+
+    body.classList.toggle("dark");
+
+    const dark =
+        body.classList.contains("dark");
+
+    localStorage.setItem(
+        "uri-v6-theme",
+        dark ? "dark" : "light"
+    );
+
+    themeIcon.innerHTML =
+        dark
+        ? '<use href="#sun"></use>'
+        : '<use href="#moon"></use>';
+
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+menuBtn.addEventListener("click",()=>{
+
+    nav.classList.toggle("open");
+
+    const opened =
+        nav.classList.contains("open");
+
+    menuBtn.innerHTML =
+        opened
+
+        ? '<svg class="icon"><use href="#close"></use></svg>'
+
+        : '<svg class="icon"><use href="#menu"></use></svg>';
+
+});
+
+
+document.querySelectorAll(".nav a")
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        nav.classList.remove("open");
+
+        menuBtn.innerHTML =
+            '<svg class="icon"><use href="#menu"></use></svg>';
+
+    });
+
+});
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+function handleScroll(){
+
+    const scrollTop =
+        window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+
+    const percentage =
+        documentHeight > 0
+
+        ? (scrollTop / documentHeight) * 100
+
+        : 0;
+
+
+    progress.style.width =
+        percentage + "%";
+
+
+    if(scrollTop > 30){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+
+    if(scrollTop > 450){
+
+        floatingApply.classList.add("show");
+
+        backTop.classList.add("show");
+
+    }else{
+
+        floatingApply.classList.remove("show");
+
+        backTop.classList.remove("show");
+
+    }
+
+
+    updateNavigation();
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+function updateNavigation(){
+
+    const sections =
+        document.querySelectorAll(
+            "main section[id]"
+        );
+
+    const links =
+        document.querySelectorAll(
+            ".nav a"
+        );
+
+    let current = "";
+
+
+    sections.forEach(section=>{
+
+        const top =
+            section.offsetTop - 180;
+
+
+        if(window.scrollY >= top){
+
+            current =
+                section.id;
+
+        }
+
+    });
+
+
+    links.forEach(link=>{
+
+        link.classList.remove("active");
+
+        const target =
+            link.getAttribute("href");
+
+
+        if(target === "#" + current){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    handleScroll,
+    {passive:true}
+);
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+backTop.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+const observer =
+    new IntersectionObserver(
+
+        entries=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    entry.target
+                        .classList
+                        .add("visible");
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:.10
+        }
+
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(element=>{
+
+        observer.observe(element);
+
+    });
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+document
+    .querySelectorAll(".faq-question")
+    .forEach(question=>{
+
+
+        question.addEventListener(
+            "click",
+            ()=>{
+
+
+                const currentFAQ =
+                    question.closest(".faq");
+
+
+                const answer =
+                    currentFAQ.querySelector(
+                        ".faq-answer"
+                    );
+
+
+                document
+                    .querySelectorAll(".faq.open")
+                    .forEach(other=>{
+
+                        if(other !== currentFAQ){
+
+                            other.classList
+                                .remove("open");
+
+                            other.querySelector(
+                                ".faq-answer"
+                            ).style.maxHeight =
+                                null;
+
+                        }
+
+                    });
+
+
+                currentFAQ.classList.toggle(
+                    "open"
+                );
+
+
+                if(
+                    currentFAQ.classList
+                        .contains("open")
+                ){
+
+                    answer.style.maxHeight =
+                        answer.scrollHeight + "px";
+
+                }else{
+
+                    answer.style.maxHeight =
+                        null;
+
+                }
+
+            }
+
+        );
+
+    });
+
+
+/* =========================================================
+   INIT
+========================================================= */
+
+handleScroll();
+
+</script>
+
+</body>
+</html>
